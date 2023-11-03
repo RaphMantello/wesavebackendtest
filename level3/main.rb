@@ -1,8 +1,8 @@
 require 'json'
 require 'date'
 
-require './commission'
-require './rental'
+require '../commission'
+require '../rental'
 
 data_file = File.read('./data/input.json')
 data = JSON.parse(data_file)

@@ -9,6 +9,12 @@ class Rental
     @distance = input['distance']
   end
 
+  def actions
+    ACTOR_TYPES.map do |actor_type|
+      Action.new(actor_type, self).formatted
+    end
+  end
+
   def duration
     (Date.parse(end_date) - Date.parse(start_date)).to_i + 1
   end
