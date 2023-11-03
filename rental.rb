@@ -9,6 +9,11 @@ class Rental
     @distance = input['distance']
   end
 
+  def options
+    selected = OPTIONS.select { |option| option['rental_id'] == id }
+    selected.map { |option| option['type'] }
+  end
+
   def actions
     ACTOR_TYPES.map do |actor_type|
       Action.new(actor_type, self).formatted

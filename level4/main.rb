@@ -22,6 +22,4 @@ output = {
   end
 }
 
-# p output
-
 File.write('./data/output.json', JSON.dump(output))
